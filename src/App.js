@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import {DATA} from '../src/data'
+//Component Imports
+import NavBar from './Components/NavBar/NavBar';
+import Table from './Components/Table/Table';
+import AddPerson from './Components/AddPerson/AddPerson';
 
 function App() {
+const [data,setData] = useState(DATA)
+
+function addNewPerson (entry){
+  let tempData = [entry,...data];
+  setData(tempData)
+} 
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <Table data={data}/>
+      <AddPerson addNewPerson={addNewPerson}/>
+
     </div>
   );
 }
