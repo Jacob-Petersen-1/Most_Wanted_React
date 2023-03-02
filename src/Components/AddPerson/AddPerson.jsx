@@ -23,9 +23,9 @@ const AddPerson = ({addNewPerson}) => {
     
     return ( 
             <form onSubmit={handleSubmit}>
-                <input type='text' value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
-                <input type='text' value={lastName} onChange={(e) => setLastName(e.target.value)}/>
-                <button type='submit'>Submit</button>
+                <input type='text' placeholder='Enter First Name...' value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
+                <input type='text' placeholder='Enter Last Name...' value={lastName} onChange={(e) => setLastName(e.target.value)}/>
+                <button type='submit'>ADD</button>
             </form>
      );
 }

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 const Table = ({ data }) => {
-  const[search,setSearch] = useState()
+  const[search,setSearch] = useState('')
   
   
   
@@ -19,8 +19,8 @@ const Table = ({ data }) => {
           <th>Last Name</th>
           <th>Gender</th>
           <th>DOB</th>
-          <th>Height</th>
-          <th>Weight</th>
+          <th>Height (Inches)</th>
+          <th>Weight(Pounds)</th>
           <th>Occupation</th>
         </tr>
       </thead>
